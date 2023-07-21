@@ -4,7 +4,7 @@ const SupscriptionController = require('../controller/supscriptionController');
 const { verifyToken } = require('../utills/helper');
 
 
-const { supscriptionValidationRules, validate } = require('../validator/authValidation');
+const { supscriptionValidationRules, validate } = require('../validator/validationRule');
 
 
 router.post('/subscription', supscriptionValidationRules(),validate,verifyToken, SupscriptionController.subscription);
