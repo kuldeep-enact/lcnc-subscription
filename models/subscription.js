@@ -12,18 +12,18 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Subscription.belongsTo(models.User, {
-        foreignKey: 'user_id',
-        as:'subscription',
-        onDelete: 'CASCADE'
-      });
-      Subscription.belongsTo(models.Plan, {
-        foreignKey: 'active_plan',
-        targetKey:'active_plan',
-        as:'subscribed_plan',
-        onDelete: 'CASCADE',
-        onUpdate:'CASCADE'
-      });
+      // Subscription.belongsTo(models.User, {
+      //   foreignKey: 'user_id',
+      //   as:'subscription',
+      //   onDelete: 'CASCADE'
+      // });
+      // Subscription.belongsTo(models.Plan, {
+      //   foreignKey: 'active_plan',
+      //   targetKey:'active_plan',
+      //   as:'subscribed_plan',
+      //   onDelete: 'CASCADE',
+      //   onUpdate:'CASCADE'
+      // });
     }
   }
   Subscription.init({
