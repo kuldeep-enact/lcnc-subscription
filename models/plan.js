@@ -13,18 +13,18 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
 
-      Plan.hasMany(models.Feature, {
-        as:'features',
-        foreignKey: 'plan_id',
-        onDelete: 'CASCADE'
-      });
-      Plan.hasMany(models.Subscription, {
-        as:'subscribed_plan',
-        sourceKey:'active_plan',
-        foreignKey: 'active_plan', 
-        onDelete: 'CASCADE',
-        onUpdate:'CASCADE'
-      });
+      // Plan.hasMany(models.Feature, {
+      //   as:'features',
+      //   foreignKey: 'plan_id',
+      //   onDelete: 'CASCADE'
+      // });
+      // Plan.hasMany(models.Subscription, {
+      //   as:'subscribed_plan',
+      //   sourceKey:'active_plan',
+      //   foreignKey: 'active_plan', 
+      //   onDelete: 'CASCADE',
+      //   onUpdate:'CASCADE'
+      // });
     }
   }
   Plan.init({
